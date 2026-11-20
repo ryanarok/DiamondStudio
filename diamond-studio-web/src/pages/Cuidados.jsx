@@ -6,7 +6,7 @@ import { AFTERCARE, AFTERCARE_NOTE } from '../data/aftercare'
 export default function Cuidados() {
   return (
     <>
-      <section className="border-b border-ink-200 bg-ink-50">
+      <section className="border-b border-line bg-surface-alt">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <Reveal>
             <SectionTitle
@@ -22,25 +22,25 @@ export default function Cuidados() {
         <div className="space-y-10">
           {AFTERCARE.map((phase, i) => (
             <Reveal key={phase.id} delay={i * 60}>
-              <article className="overflow-hidden rounded-3xl border border-ink-200">
-                <header className="flex items-center gap-4 border-b border-ink-200 bg-ink-50 px-6 py-5 sm:px-8">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-diamond-600">
+              <article className="overflow-hidden rounded-3xl border border-line">
+                <header className="flex items-center gap-4 border-b border-line bg-surface-alt px-6 py-5 sm:px-8">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-surface text-accent-text">
                     <PhaseIcon name={phase.icon} />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-diamond-600">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-accent-text">
                       Paso {i + 1}
                     </p>
-                    <h2 className="font-display text-xl text-ink-900 sm:text-2xl">{phase.title}</h2>
+                    <h2 className="font-display text-xl text-foreground sm:text-2xl">{phase.title}</h2>
                   </div>
                 </header>
-                <ul className="divide-y divide-ink-100">
+                <ul className="divide-y divide-line-soft">
                   {phase.tips.map((tip, t) => (
                     <li key={t} className="flex items-start gap-3 px-6 py-4 sm:px-8">
-                      <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-5 w-5 shrink-0 text-diamond-500" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true">
                         <path d="M5 12l4 4 10-10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span className="text-ink-500">{tip}</span>
+                      <span className="text-muted">{tip}</span>
                     </li>
                   ))}
                 </ul>
@@ -50,7 +50,7 @@ export default function Cuidados() {
         </div>
 
         <Reveal>
-          <p className="mt-8 rounded-xl bg-ink-50 px-5 py-4 text-sm text-ink-400">
+          <p className="mt-8 rounded-xl bg-surface-alt px-5 py-4 text-sm text-faint">
             {AFTERCARE_NOTE}
           </p>
         </Reveal>
@@ -58,10 +58,10 @@ export default function Cuidados() {
 
       <section className="mx-auto max-w-6xl px-5 pb-20 sm:px-8">
         <Reveal>
-          <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-ink-200 bg-ink-50 p-8 text-center sm:flex-row sm:p-10 sm:text-left">
+          <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-line bg-surface-alt p-8 text-center sm:flex-row sm:p-10 sm:text-left">
             <div>
-              <h2 className="font-display text-2xl text-ink-900">¿Tenés dudas con tu cicatrización?</h2>
-              <p className="mt-2 text-ink-500">
+              <h2 className="font-display text-2xl text-foreground">¿Tenés dudas con tu cicatrización?</h2>
+              <p className="mt-2 text-muted">
                 Escribinos y te ayudamos. Si notás algo raro, siempre es mejor consultar.
               </p>
             </div>

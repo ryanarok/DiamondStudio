@@ -11,15 +11,15 @@ export default function WhatsAppButton({
   const href = message ? whatsappLink(message) : whatsappLink()
 
   const base =
-    'inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-diamond-600 focus-visible:ring-offset-2'
+    'inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background'
 
   const variants = {
     solid:
-      'bg-diamond-600 text-white px-6 py-3 shadow-lg shadow-diamond-600/20 hover:bg-diamond-700 hover:shadow-diamond-600/30 hover:-translate-y-0.5',
+      'bg-accent text-white px-6 py-3 shadow-lg shadow-accent/20 hover:bg-accent-strong hover:shadow-accent/30 hover:-translate-y-0.5',
     outline:
-      'border border-ink-200 text-ink-900 px-6 py-3 hover:border-diamond-600 hover:text-diamond-600',
+      'border border-line text-foreground px-6 py-3 hover:border-accent hover:text-accent-text',
     ghost:
-      'text-diamond-600 px-1 py-1 hover:text-diamond-700 underline underline-offset-4 decoration-diamond-200',
+      'text-accent-text px-1 py-1 hover:text-accent-text-hover underline underline-offset-4 decoration-accent-soft-border',
   }
 
   return (

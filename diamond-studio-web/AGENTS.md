@@ -35,11 +35,35 @@ con `@theme`:
 
 - `font-sans` → Inter (cuerpo), `font-display` → Fraunces (títulos). Se usan como
   `font-sans` y `font-display`.
-- Paleta de acento **`diamond-*`** (azul "diamante", base `--color-diamond-600: #2563eb`).
-- Paleta neutra **`ink-*`** (blanco/negro minimalista, de `ink-50` a `ink-900`).
+- **Usá tokens semánticos, no valores crudos.** La paleta se divide en:
+  - Superficie: `background`, `surface`, `surface-alt`, `line`, `line-soft`
+  - Texto: `foreground` (títulos), `body`, `muted` (secundario), `faint` (terciario)
+  - Acento azul: `accent` (fondo botón), `accent-strong` (hover), `accent-text`
+    (enlaces/texto azul), `accent-text-hover`, `accent-soft` (badges),
+    `accent-on-soft` (texto sobre badge), `accent-soft-border`
+  - Fijos (siempre oscuros): `carbon` (visor de imágenes/overlays),
+    `night` (banda de contacto/CTA)
+  - Decorativos fijos sobre superficies oscuras: `diamond-300/400/500`
+- Ejemplos: `bg-surface`, `text-muted`, `border-line`, `text-accent-text`.
 
-Usá estas clases de color en vez de valores hex sueltos. La estética general es
-**minimalista**: fondo blanco, texto oscuro, azul solo como acento.
+La estética general es **minimalista**: fondo claro, texto oscuro, azul solo como
+accento (en tema oscuro se invierte: fondo oscuro, texto claro, azul más brillante).
+
+## Tema claro/oscuro
+
+- **Automático por defecto**: sigue `prefers-color-scheme` del dispositivo.
+- **Botón toggle** en el navbar (`src/components/ThemeToggle.jsx`) para forzar
+  claro u oscuro; guarda la elección en `localStorage` bajo la clave `theme`.
+- **Sin FOUC**: un script inline en `<head>` de `index.html` aplica la clase
+  `.dark` en `<html>` antes del primer pintado (prioridad: guardado > sistema) y
+  escucha cambios del sistema solo si no hay elección guardada.
+- **Implementación**: los tokens semánticos se definen con valores claros en
+  `@theme` y se redefinen en `:root.dark` (en `src/index.css`). Tailwind emite
+  utilidades como `var(--color-*)`, así que las variables se invierten solas y el
+  JSX no necesita clases `dark:`. Para cambiar un color del tema, editá el valor en
+  `@theme` (claro) y en `:root.dark` (oscuro).
+- Si agregás un color nuevo, definilo en ambos bloques (`@theme` y `:root.dark`).
+- Para probar: `npm run dev` y tocar el botón sol/luna del navbar.
 
 Las animaciones son **CSS puro** (sin framer-motion ni librerías). El revelado al
 scroll usa el componente `Reveal` (IntersectionObserver + las clases `.reveal` /
@@ -63,6 +87,7 @@ src/
 ├── components/
 │   ├── Navbar.jsx        # nav sticky + menú móvil
 │   ├── Footer.jsx
+│   ├── ThemeToggle.jsx   # botón sol/luna (tema claro/oscuro)
 │   ├── WhatsAppButton.jsx# botón CTA con mensaje pre-armado
 │   ├── GalleryGrid.jsx   # grid + filtros + lightbox
 │   ├── Lightbox.jsx      # modal a pantalla completa
@@ -98,7 +123,7 @@ Los precios/estéticas de ejemplo están en `src/data/*`.
 
 El contenido de ejemplo está marcado con el literal **`PLACEHOLDER`** para que sea
 fácil de detectar y reemplazar por datos reales. Incluye: número de WhatsApp,
-dirección, ciudad, horarios, URL de mapas, nombres de artistas, precios/políticas,
+dirección, ciudad, horarios, URL de mapas, precios/políticas,
 textos de cuidados y testimonios.
 
 Antes de publicar, buscar `PLACEHOLDER` en `src/` y reemplazar por datos reales:

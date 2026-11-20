@@ -15,6 +15,26 @@
       rel="stylesheet"
     />
     <title>Diamond Studio · Estudio de tatuajes</title>
+    <script>
+      // Aplica el tema antes del primer pintado para evitar parpadeo (FOUC).
+      // Prioridad: elección guardada > preferencia del dispositivo.
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var dark = saved === 'dark' || (saved !== 'light' && prefersDark);
+          if (dark) document.documentElement.classList.add('dark');
+          // Si no hay elección guardada, seguir cambios del sistema en vivo.
+          if (!saved) {
+            window
+              .matchMedia('(prefers-color-scheme: dark)')
+              .addEventListener('change', function (e) {
+                document.documentElement.classList.toggle('dark', e.matches);
+              });
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -15,73 +15,64 @@ export const GALLERY = [
   {
     id: 1,
     title: 'Rosa blackwork',
-    artist: 'PLACEHOLDER',
-    style: 'Blackwork',
+    style: 'Fineline',
     image:
-      'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=900&q=80',
+      '/static/3849018157495657461_75243485880_1.jpg',
   },
   {
     id: 2,
     title: 'Composición fineline',
-    artist: 'PLACEHOLDER',
     style: 'Fineline',
     image:
-      'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=900&q=80',
+      '/static/3726098363927613624_75243485880.jpg'
   },
   {
     id: 3,
     title: 'Retrato realista',
-    artist: 'PLACEHOLDER',
-    style: 'Realismo',
+    style: 'Lettering',
     image:
-      'https://images.unsplash.com/photo-1590246814883-57c511e76523?auto=format&fit=crop&w=900&q=80',
+      '/static/3754225159805942012_75243485880_1.jpg'
   },
   {
     id: 4,
     title: 'Pieza a color',
-    artist: 'PLACEHOLDER',
-    style: 'Color',
+    style: 'Blackwork',
     image:
-      'https://images.unsplash.com/photo-1612459284970-e8f027596582?auto=format&fit=crop&w=900&q=80',
+      '/static/3771512808853849318_75243485880.jpg'
   },
   {
     id: 5,
     title: 'Lettering de autor',
-    artist: 'PLACEHOLDER',
-    style: 'Lettering',
+    style: 'Fineline',
     image:
-      'https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=900&q=80',
+      '/static/3835519223662200282_75243485880_2.jpg'
   },
   {
     id: 6,
     title: 'Manga blackwork',
-    artist: 'PLACEHOLDER',
-    style: 'Blackwork',
+    style: 'Lettering',
     image:
-      'https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=900&q=80',
+      '/static/3865189515191602394_75243485880.jpg'
   },
   {
     id: 7,
     title: 'Detalle fineline',
-    artist: 'PLACEHOLDER',
     style: 'Fineline',
     image:
-      'https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=901&q=80',
+      '/static/3875307891574749261_75243485880.jpg'
   },
   {
     id: 8,
     title: 'Animal realista',
-    artist: 'PLACEHOLDER',
     style: 'Realismo',
     image:
-      'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=900&q=80',
+      '/static/3879115939451765624_75243485880.jpg'
   },
   {
     id: 9,
     title: 'Floral a color',
-    artist: 'PLACEHOLDER',
     style: 'Color',
     image:
-      'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=900&q=80',
+      '/static/3922332927119412546_75243485880.jpg'
   },
 ]

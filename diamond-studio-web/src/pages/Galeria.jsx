@@ -6,7 +6,7 @@ import WhatsAppButton from '../components/WhatsAppButton'
 export default function Galeria() {
   return (
     <>
-      <section className="border-b border-ink-200 bg-ink-50">
+      <section className="border-b border-line bg-surface-alt">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <Reveal>
             <SectionTitle
@@ -26,10 +26,10 @@ export default function Galeria() {
 
       <section className="mx-auto max-w-6xl px-5 pb-20 sm:px-8">
         <Reveal>
-          <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-ink-200 bg-ink-50 p-8 text-center sm:flex-row sm:p-10 sm:text-left">
+          <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-line bg-surface-alt p-8 text-center sm:flex-row sm:p-10 sm:text-left">
             <div>
-              <h2 className="font-display text-2xl text-ink-900">¿Te gustó alguna pieza?</h2>
-              <p className="mt-2 text-ink-500">
+              <h2 className="font-display text-2xl text-foreground">¿Te gustó alguna pieza?</h2>
+              <p className="mt-2 text-muted">
                 Contanos cuál te llamó la atención y la usamos como referencia para la tuya.
               </p>
             </div>

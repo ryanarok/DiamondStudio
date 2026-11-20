@@ -37,18 +37,18 @@ function Hero() {
       <div className="mx-auto max-w-6xl px-5 pb-16 pt-20 sm:px-8 sm:pb-24 sm:pt-28">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-diamond-200 bg-diamond-50 px-3 py-1 text-xs font-medium text-diamond-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-diamond-600" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent-soft-border bg-accent-soft px-3 py-1 text-xs font-medium text-accent-on-soft">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               Turnos por WhatsApp
             </span>
 
-            <h1 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-6xl">
+            <h1 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-6xl">
               Tatuajes hechos
               <br />
-              <span className="text-diamond-600">a medida.</span>
+              <span className="text-accent-text">a medida.</span>
             </h1>
 
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-500">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
               {SITE.name} es un estudio de tatuajes especializado en diseño personalizado.
               Trabajos con detalle, higiene y estilo propio.
             </p>
@@ -57,18 +57,18 @@ function Hero() {
               <WhatsAppButton>Reservar por WhatsApp</WhatsAppButton>
               <Link
                 to="/galeria"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-ink-200 px-6 py-3 font-medium text-ink-900 transition-colors duration-200 hover:border-diamond-600 hover:text-diamond-600"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3 font-medium text-foreground transition-colors duration-200 hover:border-accent hover:text-accent-text"
               >
                 Ver galería
               </Link>
             </div>
 
-            <div className="mt-10 flex items-center gap-6 text-sm text-ink-400">
+            <div className="mt-10 flex items-center gap-6 text-sm text-faint">
               <a
                 href={instagramLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 transition-colors hover:text-diamond-600"
+                className="inline-flex items-center gap-2 transition-colors hover:text-accent-text"
               >
                 <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
                   <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.6" />
@@ -81,16 +81,16 @@ function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-ink-100 shadow-2xl shadow-ink-900/10">
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-surface-alt shadow-2xl shadow-foreground/10">
               <img
                 src={GALLERY[0].image}
                 alt="Trabajo de ejemplo del estudio"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-ink-200 bg-white px-5 py-4 shadow-xl sm:block">
-              <p className="font-display text-2xl text-ink-900">{SITE.established}</p>
-              <p className="text-xs uppercase tracking-wider text-ink-400">Desde</p>
+            <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-line bg-surface px-5 py-4 shadow-xl sm:block">
+              <p className="font-display text-2xl text-foreground">{SITE.established}</p>
+              <p className="text-xs uppercase tracking-wider text-faint">Desde</p>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ function GalleryPreview() {
           />
           <Link
             to="/galeria"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-diamond-600 hover:text-diamond-700"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-text hover:text-accent-text-hover"
           >
             Ver galería completa
             <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
@@ -144,7 +144,7 @@ function About() {
   ]
 
   return (
-    <section className="border-y border-ink-200 bg-ink-50">
+    <section className="border-y border-line bg-surface-alt">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
@@ -163,17 +163,17 @@ function About() {
               {values.map((value) => (
                 <li
                   key={value.title}
-                  className="rounded-2xl border border-ink-200 bg-white p-5 transition-colors duration-200 hover:border-diamond-200"
+                  className="rounded-2xl border border-line bg-surface p-5 transition-colors duration-200 hover:border-accent-soft-border"
                 >
                   <div className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-diamond-50 text-diamond-600">
+                    <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-text">
                       <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5" aria-hidden="true">
                         <path d="M5 12l4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     <div>
-                      <h3 className="font-medium text-ink-900">{value.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-ink-500">{value.description}</p>
+                      <h3 className="font-medium text-foreground">{value.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">{value.description}</p>
                     </div>
                   </div>
                 </li>
@@ -198,7 +198,7 @@ function ServicesPreview() {
           />
           <Link
             to="/servicios"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-diamond-600 hover:text-diamond-700"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-text hover:text-accent-text-hover"
           >
             Ver servicios y precios
             <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
@@ -211,10 +211,10 @@ function ServicesPreview() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {SERVICES.map((service, i) => (
           <Reveal key={service.id} delay={i * 60}>
-            <div className="flex h-full flex-col rounded-2xl border border-ink-200 p-6 transition-colors duration-200 hover:border-diamond-300">
-              <h3 className="font-display text-xl text-ink-900">{service.name}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">{service.description}</p>
-              <p className="mt-4 text-sm font-medium text-diamond-600">
+            <div className="flex h-full flex-col rounded-2xl border border-line p-6 transition-colors duration-200 hover:border-accent-soft-border">
+              <h3 className="font-display text-xl text-foreground">{service.name}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{service.description}</p>
+              <p className="mt-4 text-sm font-medium text-accent-text">
                 {service.price} {SITE.currency}
               </p>
             </div>
@@ -227,7 +227,7 @@ function ServicesPreview() {
 
 function Process() {
   return (
-    <section className="border-y border-ink-200 bg-ink-50">
+    <section className="border-y border-line bg-surface-alt">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <Reveal>
           <SectionTitle
@@ -240,11 +240,11 @@ function Process() {
           {PROCESS.map((item, i) => (
             <Reveal key={item.step} delay={i * 70}>
               <div className="text-center">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-diamond-200 bg-white font-display text-lg text-diamond-600">
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent-soft-border bg-surface font-display text-lg text-accent-text">
                   {item.step}
                 </span>
-                <h3 className="mt-4 font-medium text-ink-900">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-500">{item.description}</p>
+                <h3 className="mt-4 font-medium text-foreground">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
               </div>
             </Reveal>
           ))}
@@ -263,7 +263,7 @@ function Testimonials() {
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {TESTIMONIALS.map((t, i) => (
           <Reveal key={t.id} delay={i * 70}>
-            <figure className="flex h-full flex-col rounded-2xl border border-ink-200 bg-white p-6">
+            <figure className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6">
               <div className="flex gap-1 text-diamond-500" aria-label="5 de 5 estrellas">
                 {[...Array(5)].map((_, s) => (
                   <svg key={s} viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
@@ -271,10 +271,10 @@ function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-ink-500">
+              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-muted">
                 “{t.text}”
               </blockquote>
-              <figcaption className="mt-4 text-sm font-medium text-ink-900">{t.name}</figcaption>
+              <figcaption className="mt-4 text-sm font-medium text-foreground">{t.name}</figcaption>
             </figure>
           </Reveal>
         ))}
@@ -283,9 +283,10 @@ function Testimonials() {
   )
 }
 
+// Banda de contacto: siempre oscura (tokens "night"), con acentos azules fijos.
 function Location() {
   return (
-    <section className="border-t border-ink-200 bg-ink-900 text-white">
+    <section className="border-t border-line bg-night text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-diamond-400">
@@ -335,7 +336,7 @@ function Location() {
         </Reveal>
 
         <Reveal delay={80}>
-          <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/10 bg-ink-700">
+          <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/10 bg-white/5">
             <div
               aria-hidden="true"
               className="absolute inset-0"
@@ -346,7 +347,7 @@ function Location() {
               }}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-diamond-600 text-white shadow-lg shadow-diamond-600/30">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-lg shadow-accent/30">
                 <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden="true">
                   <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" strokeWidth="1.6" />
                   <circle cx="12" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.6" />

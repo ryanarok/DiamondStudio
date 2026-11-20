@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 // Modal a pantalla completa para ver un trabajo en grande.
 // Se cierra con Escape, clic fuera o el botón de cerrar.
+// La superficie es siempre oscura (carbon) en ambos temas.
 export default function Lightbox({ item, onClose, onPrev, onNext }) {
   useEffect(() => {
     const onKey = (e) => {
@@ -25,7 +26,7 @@ export default function Lightbox({ item, onClose, onPrev, onNext }) {
       aria-modal="true"
       aria-label={item.title}
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/90 p-4 backdrop-blur-sm sm:p-8"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-carbon/90 p-4 backdrop-blur-sm sm:p-8"
     >
       <button
         type="button"
@@ -62,7 +63,7 @@ export default function Lightbox({ item, onClose, onPrev, onNext }) {
 
       <figure
         onClick={(e) => e.stopPropagation()}
-        className="max-h-full w-full max-w-3xl overflow-hidden rounded-2xl bg-ink-900 shadow-2xl"
+        className="max-h-full w-full max-w-3xl overflow-hidden rounded-2xl bg-carbon shadow-2xl"
       >
         <img
           src={item.image}

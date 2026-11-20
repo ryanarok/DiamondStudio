@@ -35,8 +35,8 @@ export default function GalleryGrid({ items = GALLERY, showFilters = true }) {
                 aria-pressed={active}
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200 ${
                   active
-                    ? 'bg-diamond-600 text-white shadow-sm'
-                    : 'bg-ink-100 text-ink-500 hover:bg-ink-200 hover:text-ink-900'
+                    ? 'bg-accent text-white shadow-sm'
+                    : 'bg-surface-alt text-muted hover:bg-line hover:text-foreground'
                 }`}
               >
                 {style}
@@ -47,7 +47,7 @@ export default function GalleryGrid({ items = GALLERY, showFilters = true }) {
       )}
 
       {filtered.length === 0 ? (
-        <p className="py-16 text-center text-ink-400">No hay trabajos de este estilo todavía.</p>
+        <p className="py-16 text-center text-faint">No hay trabajos de este estilo todavía.</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
           {filtered.map((item, i) => (
@@ -55,7 +55,7 @@ export default function GalleryGrid({ items = GALLERY, showFilters = true }) {
               key={item.id}
               type="button"
               onClick={() => open(i)}
-              className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-ink-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-diamond-600"
+              className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-alt focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               <img
                 src={item.image}
@@ -63,7 +63,7 @@ export default function GalleryGrid({ items = GALLERY, showFilters = true }) {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               />
-              <span className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <span className="absolute inset-0 bg-gradient-to-t from-carbon/70 via-carbon/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <span className="absolute inset-x-0 bottom-0 translate-y-2 p-4 text-left opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <span className="block font-display text-white">{item.title}</span>
                 <span className="mt-0.5 block text-xs text-white/70">{item.style}</span>

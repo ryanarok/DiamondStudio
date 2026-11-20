@@ -50,7 +50,7 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Escribir por WhatsApp a ${SITE.name}`}
-        className="fixed bottom-5 right-5 z-30 inline-flex h-14 w-14 items-center justify-center rounded-full bg-diamond-600 text-white shadow-xl shadow-diamond-600/30 transition-all duration-200 hover:scale-105 hover:bg-diamond-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-diamond-600 focus-visible:ring-offset-2"
+        className="fixed bottom-5 right-5 z-30 inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-xl shadow-accent/30 transition-all duration-200 hover:scale-105 hover:bg-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden="true">
           <path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.42 1.27 4.86L2 22l5.29-1.25A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18a8 8 0 0 1-4.08-1.12l-.29-.17-3.14.74.75-3.06-.19-.31A7.96 7.96 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8Z" />
