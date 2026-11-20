@@ -15,10 +15,10 @@ function RouteEffects() {
   useEffect(() => {
     window.scrollTo(0, 0)
     const titles = {
-      '/': `${SITE.name} · Estudio de tatuajes`,
-      '/galeria': `Galería · ${SITE.name}`,
-      '/servicios': `Servicios y precios · ${SITE.name}`,
-      '/cuidados': `Cuidados · ${SITE.name}`,
+      '': `${SITE.name} · Estudio de tatuajes`,
+      'galeria': `Galería · ${SITE.name}`,
+      'servicios': `Servicios y precios · ${SITE.name}`,
+      'cuidados': `Cuidados · ${SITE.name}`,
     }
     document.title = titles[pathname] || `${SITE.name} · Estudio de tatuajes`
   }, [pathname])
@@ -34,10 +34,10 @@ export default function App() {
 
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/galeria" element={<Galeria />} />
-          <Route path="/servicios" element={<Servicios />} />
-          <Route path="/cuidados" element={<Cuidados />} />
+          <Route path="" element={<Home />} />
+          <Route path="galeria" element={<Galeria />} />
+          <Route path="servicios" element={<Servicios />} />
+          <Route path="cuidados" element={<Cuidados />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
