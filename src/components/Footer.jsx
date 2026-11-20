@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import { SITE, instagramLink } from '../config/site'
 
 const LINKS = [
-  { to: './', label: 'Inicio' },
-  { to: './galeria', label: 'Galería' },
-  { to: './servicios', label: 'Servicios y precios' },
-  { to: './cuidados', label: 'Cuidados' },
+  { to: '/', label: 'Inicio' },
+  { to: '/galeria', label: 'Galería' },
+  { to: '/servicios', label: 'Servicios y precios' },
+  { to: '/cuidados', label: 'Cuidados' },
 ]
 
 // Se calcula una vez a nivel de módulo (evita el warning de pureza en render).

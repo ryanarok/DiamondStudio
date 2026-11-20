@@ -56,7 +56,7 @@ function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <WhatsAppButton>Reservar por WhatsApp</WhatsAppButton>
               <Link
-                to="./galeria"
+                to=".galeria"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3 font-medium text-foreground transition-colors duration-200 hover:border-accent hover:text-accent-text"
               >
                 Ver galería
@@ -110,7 +110,7 @@ function GalleryPreview() {
             description="Una selección de trabajos hechos en el estudio. Entrá a la galería para ver todo por estilo."
           />
           <Link
-            to="./galeria"
+            to=".galeria"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-text hover:text-accent-text-hover"
           >
             Ver galería completa
