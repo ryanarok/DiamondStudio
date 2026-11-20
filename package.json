@@ -1,13 +1,16 @@
 {
   "name": "diamond-studio-web",
   "private": true,
+  "homepage": "https://diamondstudio.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d -dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
